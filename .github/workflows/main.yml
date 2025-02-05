@@ -4,12 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Verificar Plataforma
-        run: |
-          if [ "$PLATAFORMA" == "AWS" ]; then
-            echo "Se está ejecutando en AWS"
-          else
-            echo "No es AWS"
-          fi
-    env:
-      PLATAFORMA: "AWS"
+      - name: Usar Secret
+        run: echo "La API_KEY es ${{ secrets.API_KEY }}"
+        
+        
