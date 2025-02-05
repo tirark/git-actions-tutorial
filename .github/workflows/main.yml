@@ -9,3 +9,10 @@ jobs:
 
       - name: Saludo
         run: echo "¡Hola, GitHub Actions!"
+        
+        env:
+  MI_VARIABLE: "¡Hola desde GitHub Actions!"
+
+steps:
+  - name: Mostrar Variable
+    run: echo "El valor de la variable es $MI_VARIABLE"
