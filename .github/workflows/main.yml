@@ -1,0 +1,11 @@
+name: MiPrimerWorkflow
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Saludo
+        run: echo "¡Hola, GitHub Actions!"
