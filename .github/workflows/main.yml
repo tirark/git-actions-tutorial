@@ -4,7 +4,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Usar Secret
-        run: echo "La API_KEY es ${{ secrets.API_KEY }}"
+     - name: Mostrar Variables de GitHub
+       run: |
+          echo "Repositorio: ${{ github.repository }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Evento: ${{ github.event_name }}"
         
         
